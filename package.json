@@ -1,0 +1,37 @@
+{
+  "name": "motion-primitives",
+  "version": "0.1.0",
+  "description": "Framer Motion animation primitives for React — FadeIn, TextReveal, MagneticButton, ScrollReveal, PageTransition",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "lint": "eslint src --ext .ts,.tsx",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": ["react", "framer-motion", "animation", "typescript", "components"],
+  "peerDependencies": {
+    "framer-motion": ">=10",
+    "react": ">=18",
+    "react-dom": ">=18",
+    "next": ">=14"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "framer-motion": "^11.2.10",
+    "react": "^18.3.1",
+    "tsup": "^8.1.0",
+    "typescript": "^5.4.5"
+  }
+}
